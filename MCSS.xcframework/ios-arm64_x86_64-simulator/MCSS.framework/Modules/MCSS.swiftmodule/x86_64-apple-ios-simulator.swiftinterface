@@ -1,0 +1,36 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.3.2 (swiftlang-1200.0.45 clang-1200.0.32.28)
+// swift-module-flags: -target x86_64-apple-ios14.3-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name MCSS
+import CommonCrypto
+import Foundation
+@_exported import MCSS
+import Swift
+import UIKit
+@_hasMissingDesignatedInitializers public class MCSSLib {
+  public static let shared: MCSS.MCSSLib
+  public func activateSandBoxMode(_ activate: Swift.Bool)
+  public func initialize(withToken token: Swift.String)
+  public func useTheme(_ name: Swift.String)
+  public func addStylesheet(fromFile file: Swift.String)
+  public func addStylesheet(fromUrl url: Swift.String)
+  public func drawImages()
+  public func apply(in viewController: UIKit.UIViewController)
+  public func apply(in view: UIKit.UIView)
+  public func apply(in cell: UIKit.UITableViewCell, forTable table: UIKit.UITableView, index: Foundation.IndexPath)
+  public func apply(in cell: UIKit.UICollectionViewCell, forCollection collection: UIKit.UICollectionView, index: Foundation.IndexPath)
+  @objc deinit
+}
+extension UIView {
+  @objc @IBInspectable dynamic public var mcssImmutable: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable dynamic public var mcssId: Swift.String {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable dynamic public var mcssClasses: Swift.String {
+    @objc get
+    @objc set
+  }
+}
